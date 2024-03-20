@@ -53,9 +53,14 @@ int factorial(int x) {
 	}
 	return x;
 }
+int sum(int x) {
+	if (x > 0)
+		x += sum(x - 1);
+	return x;
+}
 int main() {
 	int x =5;
-	cout << factorial(x);
+	cout << sum(x);
 	return 0;
 }
 
